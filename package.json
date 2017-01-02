@@ -8,6 +8,7 @@
   },
   "scripts": {
     "babel-node": "babel-node",
+    "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +29,11 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
     "babel-preset-env": "^1.1.4",
-    "babel-preset-stage-0": "^6.16.0"
+    "babel-preset-stage-0": "^6.16.0",
+    "flow-bin": "^0.37.4",
+    "flow-typed": "^2.0.0"
   }
 }
