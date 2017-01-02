@@ -8,3 +8,6 @@ install:
 
 publish:
 	yarn publish
+
+lint:
+	npm run eslint
