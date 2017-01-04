@@ -10,4 +10,4 @@ publish:
 	yarn publish
 
 lint:
-	npm run eslint
+	npm run eslint -- .
