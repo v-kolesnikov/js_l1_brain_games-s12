@@ -3,12 +3,9 @@ language: node_js
 node_js:
   - 6
 
-install:
-  - npm install -g yarn
-  - yarn install
+cache: yarn
 
-script:
-  make lint
+script: make lint
 
 deploy:
   provider: npm
