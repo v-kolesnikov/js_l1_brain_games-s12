@@ -9,3 +9,12 @@ install:
 
 script:
   make lint
+
+deploy:
+  provider: npm
+  email: re.vkolesnikov@gmail.com
+  api_key:
+    secure: mkluweqciX76MqtgrfLaLULaaaKEgQ+A3mhA2GZ9D/S5aWp1qvJANzDGUZ2nmT54KIGnTwDouOx5G+98YzEOfddKcIvaclVk9fGw4tk1vv1j8cxMqFL7gun4u2JcpyzxfStKOTxH1I3UGdwPsPjKk1qEVP3bTHlfJE5ScdmtrljBO0A47H36XLifJbg+Jd6500lj654GUjCi/zvb6PmSZJNy2XL/cvQJQz0KRtaz+Szkqbvwv4q0L/O5jqL2FNCqCbUgsl3wYQ+2zp0ewU/d3E3H4c2zde8iLLtDt+ST+8GzMx4YfNvUXTDQiwMnohfx6e0yUgww5dE/ddt51UCBLs8PP2xj15DMMbU/KW0FiinrG6FCXHXlQdSDAqBwm/6HUeytvoNNH/7kRfcfi/Uksy52SBAjxYMS+eUj/hX3MvxInuZduxWdartOGAGmKGwVFs2eGVeXvL49osQ7OHNcYEz+qi4uUBYaMvkMKLLWZ0+CyPZuBR4MfwLrVtNXKtC2YnYOhNoNxvJNjqVPHfUjuob7lObldZEnOTYe/9XS+BmOQ73UlL4zILVMdoy01F6XNu5+ZEpvABjfXbwXm1fJrvA/Gr3LRQUzpVZ9juOKFbnWzMZ2zj7bi0TBYlLaElR4MYbCf23d+Tp5bu6gKrEOPUzP3XUwBS22YKA338CjSPU=
+  on:
+    tags: true
+    repo: v-kolesnikov/js_l1_brain_games-s12
