@@ -1,59 +1,19 @@
 // @flow
-import readlineSync from 'readline-sync';
-import BrainGame from '../index';
 
-export default class BrainEven {
-  static play() {
-    console.log(BrainEven.gameDescription());
+import game from '..';
+import * as Utils from '../utils';
 
-    const playerName = BrainGame.getPlayerName();
-    BrainGame.greetPlayer(playerName);
+const description = 'Answer "yes" if number odd otherwise answer "no".';
 
-    let step = 0;
-    const maxSteps = 3;
+const nextQuestion = (): { question: string, answer: string } => {
+  const number = Utils.getRandomNumber(0, 100);
+  const answer = number % 2 === 0 ? 'yes' : 'no';
+  const question = String(number);
 
-    while (step < maxSteps) {
-      if (BrainEven.gameStep()) {
-        step += 1;
-      } else {
-        break;
-      }
-    }
+  return { question, answer };
+};
 
-    const playerIsWin = step === maxSteps;
+const evenGame = () =>
+  game(description, nextQuestion);
 
-    if (playerIsWin) {
-      BrainGame.congratulatePlayer(playerName);
-    }
-  }
-
-  static gameDescription() {
-    return 'Answer "yes" if number odd otherwise answer "no".';
-  }
-
-  static gameStep() {
-    const number = BrainEven.getRandomNumber(0, 100);
-
-    console.log(`Question: ${number}`);
-
-    const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = BrainEven.correctAnswer(number);
-
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-      return true;
-    }
-
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-
-    return false;
-  }
-
-  static getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-
-  static correctAnswer(number) {
-    return number % 2 === 0 ? 'yes' : 'no';
-  }
-}
+export default evenGame;
