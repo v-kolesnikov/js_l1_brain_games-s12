@@ -1,6 +1,6 @@
 // @flow
 
-import game from '..';
+import brainGame from '..';
 import * as Utils from '../utils';
 
 const description = 'Answer "yes" if number odd otherwise answer "no".';
@@ -13,7 +13,4 @@ const nextQuestion = (): { question: string, answer: string } => {
   return { question, answer };
 };
 
-const evenGame = () =>
-  game(description, nextQuestion);
-
-export default evenGame;
+export default () => brainGame(description, nextQuestion);

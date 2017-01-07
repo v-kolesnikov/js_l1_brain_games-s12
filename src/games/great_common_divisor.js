@@ -1,6 +1,6 @@
 // @flow
 
-import game from '..';
+import brainGame from '..';
 import * as Utils from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -18,7 +18,4 @@ const nextQuestion = (): { question: string, answer: string } => {
   return { question, answer };
 };
 
-const gcdGame = () =>
-  game(description, nextQuestion);
-
-export default gcdGame;
+export default () => brainGame(description, nextQuestion);

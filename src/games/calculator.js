@@ -1,6 +1,6 @@
 // @flow
 
-import game from '..';
+import brainGame from '..';
 import * as Utils from '../utils';
 
 const description = 'What is the result of the expression?';
@@ -21,7 +21,4 @@ const nextQuestion = (): { question: string, answer: string } => {
   return { question, answer };
 };
 
-const calcGame = () =>
-  game(description, nextQuestion);
-
-export default calcGame;
+export default () => brainGame(description, nextQuestion);
