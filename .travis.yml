@@ -5,7 +5,9 @@ node_js:
 
 cache: yarn
 
-script: make lint
+script:
+  - make check
+  - make lint
 
 deploy:
   provider: npm
