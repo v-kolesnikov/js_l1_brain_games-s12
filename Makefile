@@ -9,5 +9,8 @@ install:
 publish:
 	yarn publish
 
+check:
+	npm run flow -- src
+
 lint:
-	npm run eslint -- .
+	npm run eslint -- src
