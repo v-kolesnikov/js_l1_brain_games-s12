@@ -1,7 +1,7 @@
 GAME := $(G)
 
 run:
-	npm run babel-node -- './bin/$(GAME)'
+	npm run babel-node -- './src/bin/$(GAME)'
 
 install:
 	yarn install
