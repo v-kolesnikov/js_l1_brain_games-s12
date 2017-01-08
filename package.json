@@ -1,6 +1,6 @@
 {
   "name": "js_l1_brain_games-s12-v_kolesnikov",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Hexlet JavaScript course practice",
   "main": "src/index.js",
   "bin": {
